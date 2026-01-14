@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ventana de diálogo</title>
+
+    <style>
+        dialog {
+            border: none;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        dialog::backdrop {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #abrir {
+            background-color: #007bff;
+            color: white;
+        }
+
+        #cerrar {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <dialog id="miDialogo">
+        <p>Este es un mensaje en una ventana de diálogo.</p>
+        <button id="cerrar">Cerrar</button>
+    </dialog>
+
+    <button id="abrir">Abrir diálogo</button>
+
+    <script>
+        const dialogo = document.getElementById('miDialogo');
+
+        document.getElementById('abrir').onclick = () => dialogo.showModal();
+        document.getElementById('cerrar').onclick = () => dialogo.close();
+    </script>
+
+</body>
+</html>
+
+</body>
+</html>
