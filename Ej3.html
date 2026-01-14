@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Drag and Drop</title>
+    <style>
+        #caja {
+            width: 140px;
+            height: 70px;
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            line-height: 70px;
+            cursor: grab;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="caja"
+         draggable="true"
+         ondragstart="inicioDrag()"
+         ondragend="finDrag()">
+        Arrástrame
+    </div>
+
+    <script>
+        function inicioDrag() {
+            console.log("🟢 ondragstart → El usuario EMPEZÓ a arrastrar el elemento");
+            document.getElementById("caja").style.backgroundColor = "#2196f3";
+        }
+
+        function finDrag() {
+            console.log("🔴 ondragend → El usuario SOLTÓ el elemento");
+            document.getElementById("caja").style.backgroundColor = "#4caf50";
+        }
+    </script>
+
+</body>
+</html>
